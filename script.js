@@ -1,4 +1,4 @@
-﻿// Скрипт для свадебного сайта Андрей & Диана
+// Скрипт для свадебного сайта Андрей & Диана
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Свадебный сайт загружен');
     
@@ -220,12 +220,10 @@ function initRSVPForm() {
         
         // Получаем данные
         const nameInput = this.querySelector('input[type="text"]');
-        const guestsSelect = this.querySelector('.form-select');
         const allergyInput = this.querySelector('#allergy');
         const attendanceRadio = this.querySelector('input[name="attendance"]:checked');
         
         const name = nameInput ? nameInput.value.trim() : '';
-        const guests = guestsSelect ? guestsSelect.value : '1';
         const allergy = allergyInput ? allergyInput.value.trim() : '';
         const attendance = attendanceRadio ? attendanceRadio.value : null;
         
@@ -257,7 +255,6 @@ function initRSVPForm() {
             // Формируем данные для отправки
             const formDataToSend = new URLSearchParams();
             formDataToSend.append('name', name);
-            formDataToSend.append('guests', guests);
             formDataToSend.append('allergy', allergy);
             formDataToSend.append('attendance', attendance);
             
