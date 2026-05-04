@@ -1,4 +1,4 @@
-// Скрипт для свадебного сайта Андрей & Диана
+// Скрипт для свадебного сайта Илья & Полина
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Свадебный сайт загружен');
     
@@ -188,7 +188,7 @@ function showLoadingModal() {
                 width: 50px;
                 height: 50px;
                 border: 3px solid #e0e0e0;
-                border-top-color: #999;
+                border-top-color: #5c151b;
                 border-radius: 50%;
                 margin: 0 auto 20px;
                 animation: spin 1s linear infinite;
@@ -205,7 +205,7 @@ function showLoadingModal() {
 }
 
 // ========== GOOGLE SHEETS ==========
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKU_r7GeeMC-PfEUmgIOQLFrZLZZiSTcPwwQHCYO-D98q/exec'; // ЗАМЕНИТЕ НА ВАШ URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwX6S_e5iEI4GI4OSlkR08TfaW2M4N7OiAhB3ui6gyegjMpSWBK1gmlPHQ5LbAc4Osn/exec'; // ЗАМЕНИТЕ НА ВАШ URL
 
 // Инициализация формы RSVP
 function initRSVPForm() {
@@ -227,7 +227,7 @@ function initRSVPForm() {
         const allergy = allergyInput ? allergyInput.value.trim() : '';
         const attendance = attendanceRadio ? attendanceRadio.value : null;
         
-        // Собираем выбранные алкогольные предпочтения (несколько чекбоксов)
+        // Собираем выбранные алкогольные предпочтения
         let alcoholValues = [];
         document.querySelectorAll('input[name="alcohol"]:checked').forEach(checkbox => {
             alcoholValues.push(checkbox.value);
@@ -276,7 +276,7 @@ function initRSVPForm() {
                 if (attendance === 'yes') {
                     showModal(
                         'Спасибо, ' + name + '!',
-                        'Мы будем ждать вас на нашей свадьбе 21 августа 2026 года! 🎉',
+                        'Мы будем ждать вас на нашей свадьбе 21 августа 2026 года!',
                         false
                     );
                 } else {
